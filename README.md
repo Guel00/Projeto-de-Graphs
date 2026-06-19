@@ -12,8 +12,8 @@ Solução para os dois problemas clássicos de grafos aplicados a infraestrutura
 ```
 projeto/
 ├── backend/
-│   ├── parte1.py            # Algoritmos de roteamento
-│   └── parte2.py            # Algoritmo de coloração
+│   ├── roteamento_coloração_redes.py            # Algoritmos de roteamento
+│   └── alocacao_canais_wifi.py                  # Algoritmo de coloração
 │── README.md
 └── main.py          # Interface gráfica (Tkinter)
 ```
@@ -43,9 +43,9 @@ python main.py
 
 A janela abre com duas abas — uma para cada parte. Em cada aba:
 
-1. Clique em **📂 Carregar arquivo** e selecione o `.txt` correspondente
+1. Clique em **Carregar arquivo** e selecione o `.txt` correspondente
 2. O conteúdo do arquivo aparece na prévia
-3. Clique em **▶ Resolver**
+3. Clique em **Resolver**
 4. O resultado aparece na caixa verde
 
 > O algoritmo da Parte 1 é escolhido automaticamente: **Dijkstra** se não houver pesos negativos, **Bellman-Ford** se houver.
@@ -60,11 +60,11 @@ Você também pode rodar cada parte diretamente pelo terminal, sem a interface:
 
 ```bash
 cd backend
-python roteamento_redes.py <arquivo_entrada> <arquivo_saida>
+python roteamento_coloração_redes.py <arquivo_entrada> <arquivo_saida>
 
 # Exemplos:
-python roteamento_redes.py grafo_rede_p.txt saida_rot_p.txt
-python roteamento_redes.py grafo_rede_m.txt saida_rot_m.txt
+python roteamento_coloração_redes.py grafo_rede_p.txt saida_rot_p.txt
+python roteamento_coloração_redes.py grafo_rede_m.txt saida_rot_m.txt
 ```
 
 **Parte 2 — Coloração:**
