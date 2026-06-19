@@ -17,8 +17,7 @@ def bellman_ford(n, edges, src, dst):
                 updated = True
         if not updated:
             break
-
-    # Verificação de ciclo negativo
+        
     for u, v, w in edges:
         if dist[u] != INF and dist[u] + w < dist[v]:
             raise ValueError("Ciclo negativo detectado no grafo.")
@@ -71,9 +70,8 @@ def format_cost(cost):
     return str(cost)
 
 
-def solve(input_path, output_path):
-    with open(input_path, "r") as f:
-        lines = [l.strip() for l in f if l.strip()]
+def solve_from_text(text):
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
 
     n, _ = map(int, lines[0].split("\t"))
     src, dst = map(int, lines[1].split("\t"))
@@ -114,6 +112,13 @@ def solve(input_path, output_path):
         f"ROTA: {' '.join(map(str, path))}\n"
         f"CUSTO: {format_cost(cost)}\n"
     )
+    return output
+
+
+def solve(input_path, output_path):
+    with open(input_path, "r") as f:
+        content = f.read()
+    output = solve_from_text(content)
 
     with open(output_path, "w") as f:
         f.write(output)

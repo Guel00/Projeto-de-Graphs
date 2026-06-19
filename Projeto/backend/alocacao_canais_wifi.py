@@ -37,9 +37,8 @@ def validate_coloring(n, adj, color):
     return True, None
 
 
-def solve(input_path, output_path):
-    with open(input_path, "r") as f:
-        lines = [l.strip() for l in f if l.strip()]
+def solve_from_text(text):
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
 
     n, _ = map(int, lines[0].split("\t"))
     adj = [[] for _ in range(n)]
@@ -72,6 +71,13 @@ def solve(input_path, output_path):
         f"NUM_CORES: {num_colors}\n"
         f"COLORACAO: {coloring_str}\n"
     )
+    return output
+
+
+def solve(input_path, output_path):
+    with open(input_path, "r") as f:
+        content = f.read()
+    output = solve_from_text(content)
 
     with open(output_path, "w") as f:
         f.write(output)
