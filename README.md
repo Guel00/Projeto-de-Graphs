@@ -1,3 +1,8 @@
+Alunos : 
+Arthur Vinicius Alves da Silva
+Miguel Castela Ferreira 
+Otávio Fernandes de Oliveira 
+
 # Prática 1 — Grafos: Roteamento e Coloração em Redes
 
 Solução para os dois problemas clássicos de grafos aplicados a infraestrutura de redes:
