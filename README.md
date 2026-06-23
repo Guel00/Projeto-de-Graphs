@@ -1,7 +1,7 @@
 Alunos : 
-Arthur Vinicius Alves da Silva
-Miguel Castela Ferreira 
-Otávio Fernandes de Oliveira 
+Arthur Vinicius Alves da Silva,
+Miguel Castela Ferreira, 
+Otávio Fernandes de Oliveira.
 
 # Prática 1 — Grafos: Roteamento e Coloração em Redes
 
